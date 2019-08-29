@@ -1,6 +1,11 @@
 ISING - An Ising model simulator
 =================================
 
+** fork from https://github.com/zeehio/ising **
+
+Modifications for saving configurations...
+
+
 ## Building the source code
 Simply run:
 
