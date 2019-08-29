@@ -1,9 +1,9 @@
 ISING - An Ising model simulator
 =================================
 
-** fork from https://github.com/zeehio/ising **
+**fork from https://github.com/zeehio/ising**
 
-Modifications for saving configurations...
+Modifications for saving all spin configurations used for measurements...
 
 
 ## Building the source code
