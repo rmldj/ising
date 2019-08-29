@@ -1,0 +1,17 @@
+*.o
+*.a
+*.lo
+*.la
+config/*
+autom4te.cache
+*Make*
+*/.deps
+*/.libs
+*config*
+aclocal.m4
+install/
+libtool
+src/autocorr
+src/binning
+src/ising
+src/jackknife
