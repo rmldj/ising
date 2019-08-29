@@ -12,7 +12,7 @@ int makedir(const char * const dirname){
 				abort();
 				break;
 			case EEXIST:
-				fprintf(stderr,"\"%s\" already exists.\n",dirname);
+				//fprintf(stderr,"\"%s\" already exists.\n",dirname);
 				break;
 			case EMLINK:
 				fprintf(stderr,"The parent directory has too many links (entries).\n");

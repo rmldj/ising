@@ -884,7 +884,7 @@ int main(int argc, char **argv)
         E+=Metropolis(spins,veins,sequential,bonds,T,nmeas,&M,TypeDyn); //Metropolis for "nmcs" MCS taking measures each "nmeas"
         R=ClusterRadius(spins,d,L);
         printf("%d\t%d\t%lf\n",E,M,R);
-        if (printstate==1 && log10(i+1) == round(log10(i+1)))
+        if (printstate==1) // && log10(i+1) == round(log10(i+1)))
         {
             GuardaEstat(i+1,spins,L,d);
             CorrelRadi(i+1,spins,L,d);
