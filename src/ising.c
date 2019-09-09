@@ -878,18 +878,20 @@ int main(int argc, char **argv)
     if (TypeDyn != 3)
         Initmyexp(N,veins,T, TypeDyn);
     E+=Metropolis(spins,veins,sequential,bonds,T,ieq,&M,TypeDyn); //Metropolis for the first "ieq" that we ignore
-    printf("# E \t M \t R\n");
     for (i=0;i<nmcs/nmeas;++i)
     {
         E+=Metropolis(spins,veins,sequential,bonds,T,nmeas,&M,TypeDyn); //Metropolis for "nmcs" MCS taking measures each "nmeas"
         R=ClusterRadius(spins,d,L);
-        printf("%d\t%d\t%lf\n",E,M,R);
+        //printf("%d\t%d\t%lf\n",E,M,R);
         if (printstate==1) // && log10(i+1) == round(log10(i+1)))
         {
             GuardaEstat(i+1,spins,L,d);
-            CorrelRadi(i+1,spins,L,d);
+            //CorrelRadi(i+1,spins,L,d);
+            printf("%u/%lu\r", i, nmcs/nmeas);
+            fflush(stdout);
         }
     }
+    printf("\n");
     if (TypeDyn ==1)
         DestroyIntVector(sequential);
     else if (TypeDyn == 3)
