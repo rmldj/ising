@@ -887,7 +887,7 @@ int main(int argc, char **argv)
         {
             GuardaEstat(i+1,spins,L,d);
             //CorrelRadi(i+1,spins,L,d);
-            printf("%u/%lu\r", i, nmcs/nmeas);
+            printf("%u/%lu\r", i+1, nmcs/nmeas);
             fflush(stdout);
         }
     }
